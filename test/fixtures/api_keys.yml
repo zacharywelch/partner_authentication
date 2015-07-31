@@ -3,3 +3,7 @@
 one:
   partner_id: "foo"
   partner_password: "bar"
+
+key_with_range:
+  partner_id: "foo"
+  partner_password: "baz"

@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150731211903) do
+ActiveRecord::Schema.define(version: 20150731212718) do
+
+  create_table "ip_addresses", force: :cascade do |t|
+    t.string "partner_id"
+    t.string "ip_address"
+  end
 
   create_table "partners", force: :cascade do |t|
     t.string "partner_id"
