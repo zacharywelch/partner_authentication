@@ -1,0 +1,2 @@
+module PartnerAuthentication
+end
