@@ -22,11 +22,13 @@ Run the install generator.
 
     $ rails g partner_authentication:install
 
-This generates an `ApiKey` model and executes `rake db:migrate` with the new migration.
+This generates migrations and models for partner authentication.
 
 ## Usage
 
-Each `ApiKey` is mapped to a partner ID token in the `partners` table.
+After installing the gem two models are added to your `app/models` directory.
+
+`ApiKey` represents an api token and is mapped to the `partners` table. `AuthorizedIp` maintains a list of trusted IPs, which can be static or ranges. For more information see [api_key](https://cagit.careerbuilder.com/zwelch/partner_authentication/blob/master/test/dummy/app/models/api_key.rb) and [authorized_ip](https://cagit.careerbuilder.com/zwelch/partner_authentication/blob/master/test/dummy/app/models/authorized_ip.rb).
 
 An authentication filter is automatically included in `ActionController::Base` or `ActionController::API` if you're using [rails-api](https://github.com/rails-api/rails-api). 
 
