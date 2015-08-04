@@ -1,7 +1,9 @@
 class AuthorizedIp < ActiveRecord::Base
-  self.table_name = "ip_addresses"
+  self.table_name = "cbpartneripaddress"
 
-  belongs_to :api_key, foreign_key: :partner_id
+  alias_attribute :ip_address, :IPAddress
+  
+  belongs_to :api_key, foreign_key: :PartnerID
 
   def pattern
     Regexp.new ip_address.gsub('.', '\\.').gsub('*', '\\d{1,3}')

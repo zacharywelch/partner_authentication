@@ -1,21 +1,21 @@
-require 'rails/generators/base'
+require 'rails/generators/active_record'
 
 module PartnerAuthentication
   module Generators
-    class InstallGenerator < Rails::Generators::Base
+    class InstallGenerator < ActiveRecord::Generators::Base
+      argument :name, type: :string, default: 'random_name'
       source_root File.expand_path("../templates", __FILE__)
 
-      def generate_migration
-        generate "migration", "create_partners partner_id partner_password --skip"
-        generate "migration", "create_ip_addresses partner_id ip_address --skip"
-        rake "db:migrate"
+      def generate_migrations        
+        migration_template "api_key_migration.rb", "db/migrate/create_partners.rb"
+        migration_template "authorized_ip_migration.rb", "db/migrate/create_ip_addresses.rb"
       end
 
       def copy_models
         %w(api_key authorized_ip).each do |model|
           copy_file "#{model}.rb", "app/models/#{model}.rb"
         end
-      end      
+      end
     end
   end
 end
