@@ -1,0 +1,8 @@
+class CreatePartners < ActiveRecord::Migration
+  def change
+    create_table :cbpartner, primary_key: :RowID do |t|
+      t.string :PartnerID
+      t.string :PartnerPassword
+    end
+  end
+end
