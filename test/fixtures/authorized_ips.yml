@@ -2,8 +2,8 @@
 
 one:
   IPAddress: "127.0.0.1"
-  api_key: one
+  PartnerID: "foo"
 
 ip_with_range:
   IPAddress: "127.*.0.*"
-  api_key: key_with_range
+  PartnerID: "baz"

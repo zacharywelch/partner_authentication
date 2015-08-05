@@ -5,6 +5,7 @@ class PartnerAuthenticationTest < ActionController::TestCase
   
   setup do
     ApiKey.delete_all
+    AuthorizedIp.delete_all
     key = ApiKey.create key: 'foo', token: 'bar'
     key.authorized_ips.create ip_address: "127.0.0.1"    
     @request.stubs(:remote_ip).returns("127.0.0.1")

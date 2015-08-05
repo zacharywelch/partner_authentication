@@ -13,6 +13,7 @@ class ApiKeyTest < ActiveSupport::TestCase
 
   test "#authorized? is true when ip is authorized" do
     key = api_keys(:one)
+    puts "key.authorized_ips = #{key.authorized_ips.first}"
     assert key.authorized?("127.0.0.1")
   end
 

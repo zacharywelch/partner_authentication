@@ -5,5 +5,5 @@ one:
   PartnerPassword: "bar"
 
 key_with_range:
-  PartnerID: "foo"
-  PartnerPassword: "baz"
+  PartnerID: "baz"
+  PartnerPassword: "bar"
