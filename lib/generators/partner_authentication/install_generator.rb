@@ -10,12 +10,6 @@ module PartnerAuthentication
         migration_template "api_key_migration.rb", "db/migrate/create_partners.rb"
         migration_template "authorized_ip_migration.rb", "db/migrate/create_ip_addresses.rb"
       end
-
-      def copy_models
-        %w(api_key authorized_ip).each do |model|
-          copy_file "#{model}.rb", "app/models/#{model}.rb"
-        end
-      end
     end
   end
 end

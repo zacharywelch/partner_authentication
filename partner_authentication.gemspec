@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = PartnerAuthentication::VERSION
   s.authors     = ["zwelchcb"]
   s.email       = ["Zachary.Welch@careerbuilder.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of PartnerAuthentication."
-  s.description = "TODO: Description of PartnerAuthentication."
+  s.homepage    = "https://cagit.careerbuilder.com/zwelch/partner_authentication"
+  s.summary     = "Partner authentication for rails api."
+  s.description = "Partner authentication for rails api."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]

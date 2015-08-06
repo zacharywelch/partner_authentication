@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150804022029) do
+ActiveRecord::Schema.define(version: 20150806215324) do
 
   create_table "cbpartner", primary_key: "RowID", force: :cascade do |t|
     t.string "PartnerID"
