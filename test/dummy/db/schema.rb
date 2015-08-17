@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150806215324) do
+ActiveRecord::Schema.define(version: 20150817153755) do
 
-  create_table "cbpartner", primary_key: "RowID", force: :cascade do |t|
+  create_table "ardata.cbpartner", primary_key: "RowID", force: :cascade do |t|
     t.string "PartnerID"
     t.string "PartnerPassword"
   end
 
-  create_table "cbpartneripaddress", primary_key: "RowID", force: :cascade do |t|
+  create_table "ardata.cbpartneripaddress", primary_key: "RowID", force: :cascade do |t|
     t.string "PartnerID"
     t.string "IPAddress"
   end

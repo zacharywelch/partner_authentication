@@ -1,5 +1,6 @@
 class ApiKey < ActiveRecord::Base
-  self.table_name = "cbpartner"
+  self.table_name = "ardata.cbpartner"
+  self.primary_key = "RowID"
 
   alias_attribute :key, :PartnerID
   alias_attribute :token, :PartnerPassword

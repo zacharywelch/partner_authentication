@@ -1,5 +1,6 @@
 class AuthorizedIp < ActiveRecord::Base
-  self.table_name = "cbpartneripaddress"
+  self.table_name = "ardata.cbpartneripaddress"
+  self.primary_key = "RowID"
 
   alias_attribute :ip_address, :IPAddress
   
