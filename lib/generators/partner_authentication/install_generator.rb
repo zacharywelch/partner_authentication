@@ -13,8 +13,12 @@ module PartnerAuthentication
 
       def copy_models
         %w(api_key authorized_ip).each do |model|
-          copy_file "#{model}.rb", "lib/#{model}.rb"
+          copy_file "#{model}.rb", "lib/partner_authentication/#{model}.rb"
         end
+      end
+
+      def copy_initializer_file
+        copy_file "initializer.rb", "config/initializers/partner_authentication.rb"
       end
     end
   end
