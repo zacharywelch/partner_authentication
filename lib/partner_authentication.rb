@@ -4,7 +4,7 @@ module PartnerAuthentication
   included do
     before_filter :authenticate
   end
-
+  
   private
   
   def authenticate
