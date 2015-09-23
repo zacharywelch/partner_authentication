@@ -9,7 +9,7 @@ class ApiKey < ActiveRecord::Base
 
   def authorized?(ip)
     Rails.cache.fetch("#{cache_key}/ips", expires_in: 12.hours) do
-      authorized_ips
+      authorized_ips.to_a
     end.map(&:pattern).any? { |pattern| pattern.match(ip) }
   end
 
