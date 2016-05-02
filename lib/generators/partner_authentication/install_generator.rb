@@ -24,13 +24,10 @@ module PartnerAuthentication
       def copy_initializers
         copy_file "initializer.rb", "config/initializers/partner_authentication.rb"
       end
-<<<<<<< Updated upstream
-=======
 
       def copy_tasks
         copy_file "authentication.rake", "lib/tasks/authentication.rake"
       end
->>>>>>> Stashed changes
     end
   end
 end
